@@ -4,10 +4,13 @@ import pygame
 pygame.init()
 window = pygame.display.set_mode((800, 500))
 fps = pygame.time.Clock()
+
 fon_image = pygame.image.load("background.png")
 fon_image = pygame.transform.scale(fon_image, (800, 500))
+
 sprite1 = pygame.image.load("sprite1.png")
 sprite1 = pygame.transform.scale(sprite1, (50, 50))
+
 sprite2 = pygame.image.load("sprite2.png")
 sprite2 = pygame.transform.scale(sprite2, (50, 50))
 x1, y1 = 50, 50
@@ -17,9 +20,9 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+
     keys = pygame.key.get_pressed()
     if keys[pygame.K_d]:
-
         x1 += 5
     if keys[pygame.K_a]:
         x1 -= 5
@@ -29,6 +32,7 @@ while True:
         y1 += 5
     keys2 = pygame.key.get_pressed()
     if keys2[pygame.K_LEFT]:
+
         x2 -= 5
     if keys2[pygame.K_RIGHT]:
         x2 += 5
